@@ -1,0 +1,241 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif
+}
+:root {
+  --color:#019dff;
+}
+* {
+  box-sizing: border-box;
+}
+.right {
+  float: right;
+}
+.left {
+  float: left;
+}
+.clear {
+  clear: both;
+}
+h1,h2,h3,h4,h5,h6,i,p,a,li,img {
+  position: relative;
+}
+input {
+  outline: none;
+  border: none;
+}
+button {
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  outline: none;
+}
+
+nav {
+  padding: 20px 40px;
+  background: #111;
+  width: 100%;
+  position: relative;
+}
+nav h1 {
+  color: #fff;
+  margin: 0;
+  font-size: 35px;
+}
+nav a {
+  text-decoration: none;
+  outline: none;
+}
+nav h1 i {
+  margin-right: 20px;
+}
+.menu ul {
+  list-style-type: none;
+  position: relative;
+  float: right;
+}
+.menu ul li {
+  margin: 10px auto;
+}
+.menu ul li a {
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.2s;
+}
+.menu ul li a:hover {
+  color: var(--color)
+}
+
+.addbook {
+  float: left;
+}
+.addbook h5 {
+  color: #fff;
+  font-weight: 500;
+  font-size: 17px;
+  text-transform: uppercase;
+}
+.addbook input {
+  display: inline-block;
+  margin: 5px 20px;
+  margin-left: 0;
+  padding:10px;
+  background: #333; 
+  color: #ddd;
+}
+.addbook input::placeholder {
+  color: #aaa;
+}
+.addbook label input {
+  display: none;
+}
+.addbook label i {
+  position: relative;
+  font-size: 25px;
+  color: #ddd;
+  top: 2px;
+  cursor: pointer;
+}
+.addbook button {
+  display: block;
+  padding: 7px 20px;
+  margin-top: 10px;
+}
+.addbook button:hover {
+  background: var(--color);
+  color: #fff;
+}
+
+.bookshelf {
+  transition: all 0.3s;
+  float: left;
+  width: 20%;
+}
+.bookshelf ul {
+  list-style-type: none;
+}
+.bookshelf ul li {
+  position: relative;
+  padding: 10px 20px;
+  font-weight: 600;
+  color: #333;
+  background: #eee;
+  margin: 20px 0;
+  display: table;
+  min-width: 300px;
+  border-radius: 6px;
+  transition: all 0.2s;
+  cursor: pointer;
+  overflow: hidden;
+} 
+.bookshelf ul li:hover {
+  background: #e1e1e1;
+}
+.bookshelf ul li:hover i {
+  right: 10px;
+}
+.bookshelf ul li span {
+  display: block;
+  font-size: 12px;
+  color: #aaa;
+  margin-top: 10px;
+}
+.bookshelf ul li i {
+  position: absolute;
+  font-size: 20px;
+  bottom: 15px;
+  right: -20px;
+  color: #aaa;
+  transition: all 0.4s;
+  color: rgb(0, 157, 255)
+}
+.bookshelf ul li img {
+  width: 50px;
+  height: 80px;
+  object-fit: cover;
+  float: left;
+  margin-right: 20px;
+}
+
+
+.onebook {
+  float: right;
+  width: 80%;
+}
+.bookcont {
+  position: relative;
+  padding: 30px;
+  margin: 20px;
+  background: #eee;
+}
+.bookcont  .left {
+  width: 70%;
+}
+.bookcont .imgdiv {
+  width: 20%;
+  margin-right: 70px;
+}
+.bookcont img {
+  width: 300px;
+  height: 400px;
+  margin-right: 30px;
+}
+.bookcont h3 {
+  margin: 0;
+  font-size: 30px;
+}
+.bookcont h5 {
+  margin-top: 8px;
+  color: #777;
+}
+.bookcont button {
+  background: #111;
+  padding: 10px 25px;
+  margin-top: 20px;
+  color: #fff;
+}
+.bookcont button:hover {
+  background: var(--color)
+}
+.bookcont p {
+  margin-top: 30px;
+  width: 50%;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #555;
+}
+.addcollect {
+  margin-left: 20px;
+  color: var(--color);
+  cursor: pointer;
+  transition: all 0.2s;
+  padding: 7px 10px;
+}
+.addcollect:hover {
+  background:var(--color);
+  color: #fff;
+}
+.addcollect:hover i {
+  margin-right: 10px;
+}
+.addcollect i {
+  margin-right: 5px;
+  transition: margin 0.3s;
+}
+
+.moredetails {
+  color: #ddd;
+  font-size: 20px;
+  margin-left: 30px;
+  padding: 5px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.moredetails:hover {
+  color: var(--color);
+}
+.formdetails {
+  position: relative;
+  display: none;
+}
