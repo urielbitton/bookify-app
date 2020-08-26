@@ -18,6 +18,9 @@ html, body {
 .clear {
   clear: both;
 }
+img {
+  object-fit: cover;
+}
 h1,h2,h3,h4,h5,h6,i,p,a,li,img {
   position: relative;
 }
@@ -97,6 +100,9 @@ nav h1 i {
   top: 2px;
   cursor: pointer;
 }
+.addbook label i:hover {
+  color: var(--color)
+}
 .addbook button {
   display: block;
   padding: 7px 20px;
@@ -105,6 +111,32 @@ nav h1 i {
 .addbook button:hover {
   background: var(--color);
   color: #fff;
+}
+.moredetails {
+  color: #ddd;
+  font-size: 20px;
+  margin-left: 30px;
+  padding: 5px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.moredetails:hover {
+  color: var(--color);
+}
+.formdetails {
+  position: relative;
+  display: none;
+}
+.formdetails textarea {
+  display: block;
+  margin: 5px 20px;
+  margin-left: 0;
+  padding:10px;
+  outline: none;
+  border:none;
+  max-width: 200px;
+  background: #333; 
+  color: #ddd;
 }
 
 .bookshelf {
@@ -153,7 +185,6 @@ nav h1 i {
 .bookshelf ul li img {
   width: 50px;
   height: 80px;
-  object-fit: cover;
   float: left;
   margin-right: 20px;
 }
@@ -223,19 +254,29 @@ nav h1 i {
   margin-right: 5px;
   transition: margin 0.3s;
 }
+.bookcont .stores {
+  width: 50px;
+  height: 50px;
+  margin: auto 5px;
+  border-radius: 100%
+}
+.bookcont [alt="coles"] {
+  transform: scale(0.85)
+}
 
-.moredetails {
-  color: #ddd;
-  font-size: 20px;
-  margin-left: 30px;
-  padding: 5px;
-  transition: all 0.2s;
-  cursor: pointer;
-}
-.moredetails:hover {
-  color: var(--color);
-}
-.formdetails {
+.container {
   position: relative;
-  display: none;
+  padding: 40px;
 }
+
+
+
+
+
+
+
+
+
+
+
+

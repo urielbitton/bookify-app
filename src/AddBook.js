@@ -10,6 +10,7 @@ function AddBook() {
   const [inStock, setInStock] = useState(true)
   const [stock, setStock] = useState(0)
   const [plot, setPlot] = useState("") 
+  const [collect, setCollect] = useState(false) 
   const [books, setBooks] = useContext(BookContext)
 
   function updateTitle(e) {
@@ -27,6 +28,9 @@ function AddBook() {
   function updatePlot(e) {
     setPlot(e.target.value)
   }
+  function updateCollect(e) {
+    (e.target.checked? setCollect(true): setCollect(false))
+  }
 
   function updateImg() {
    var file = document.querySelector(".uploadpic").files[0];
@@ -39,12 +43,8 @@ function AddBook() {
     } 
   }
   function addABook() {
-    setBooks(prevBooks => [...prevBooks,{title: title, author: author, img: img, isbn:isbn, stock:stock, plot:plot}])
-    const inputs = document.querySelectorAll('nav input')
-    for(let item of inputs) {
-      item.value = "" 
-    }
-  }
+    setBooks(prevBooks => [...prevBooks,{title: title, author: author, img: img, isbn:isbn, stock:stock, plot:plot, collect:collect}])
+  } 
 
   let detailsclick = false
   function expandDetails() {
@@ -71,11 +71,12 @@ function AddBook() {
         <input className="uploadpic" type="file" onChange={updateImg}/>
         <i className="fas fa-images"></i>
       </label>
-      <i class="fas fa-angle-down moredetails" onClick={expandDetails}></i>
+      <i className="fas fa-angle-down moredetails" onClick={expandDetails}></i>
       <div className="formdetails">
         <input placeholder="ISBN" name="isbn" value={isbn} onChange={updateIsbn}/>
         <input placeholder="Stock" name="stock" value={stock} onChange={updateStock}/>
-        <input placeholder="Plot" name="plot" value={plot} onChange={updatePlot}/>
+        <textarea placeholder="Plot" name="plot" value={plot} onChange={updatePlot}/>
+        <input type="checkbox" name="collect" value={collect} onChange={updateCollect}/>
       </div>
       <button onClick={addABook}>Add To Library</button>
     </div> 

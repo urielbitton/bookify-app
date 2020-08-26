@@ -2,9 +2,9 @@ import React from 'react'
 
 function About() {
   return (
-    <>
-      <h1>About Library</h1>
-    </>
+    <div className="container">
+      <h1>About Bookify</h1>
+    </div>
   )
 }
 
