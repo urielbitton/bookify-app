@@ -13,6 +13,14 @@ function OneBook(props) {
       return
     })
   }
+  const removeFromCollection = () => {
+    books.map((book) => {
+      if (book.isbn === props.isbn) {
+        book.collect = false;
+      }
+      return
+    })
+  }
 
   return (
     <div className="onebook">
@@ -29,9 +37,9 @@ function OneBook(props) {
           <small>In Stock: {(props.instock)? props.stock+ " left":"No"}</small>
           <br/>
           <a href={props.link} target="_blank" rel="noopener noreferrer"><button>Buy Now</button></a>
-          <small onClick={addToCollection} className="addcollect"><i className="fas fa-bookmark bookmark"></i>Add To Collection</small>
+          <small onClick={(props.collect? removeFromCollection:addToCollection)} className="addcollect"><i className="fas fa-bookmark bookmark"></i>{props.collect? "Remove": "Add To Collection"}</small>
 
-          <p>{props.plot}</p>
+          <p>{props.plot}</p> 
           <br/>
           <img className="stores" src="https://cdn3.iconfinder.com/data/icons/glypho-social-and-other-logos/64/logo-amazon-512.png" alt="amazon"/>
           <img className="stores" src="https://pbs.twimg.com/profile_images/902348681755615232/55f83W7T_400x400.jpg" alt="coles"/>

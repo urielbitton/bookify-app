@@ -26,7 +26,6 @@ function Books() {
     setLink(link)
     setPlot(plot)
   }
-   
 
   return ( 
     <>
@@ -35,7 +34,21 @@ function Books() {
         <ul>
         {
             books.map(book => {
-              return <li onClick={() => openBook(book.title, book.author, book.img, book.inStock, book.isbn, book.stock, book.link, book.plot)} key={book.isbn}><img src={book.img} alt="img"/>{book.title} <span>{book.author}</span><i className="fas fa-bookmark"></i></li>
+              return <li 
+                onClick={() => openBook(book.title, book.author, book.img, book.inStock, book.isbn, book.stock, book.link, book.plot)} 
+                key={book.isbn}>
+                  <img src={book.img} alt="img"/>
+                  {book.title} <span>{book.author}</span>
+                  <i onClick={(e) => {
+                    e.stopPropagation()
+                    books.map((book2) => {
+                      if (book2.isbn === book.isbn) {
+                        book.collect = true;
+                      }
+                      return
+                    })
+                  }} className="fas fa-bookmark"></i>
+                </li>
             })
           }
         </ul>
