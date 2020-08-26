@@ -268,10 +268,50 @@ nav h1 i {
   position: relative;
   padding: 40px;
 }
+.bookinfo a {
+  text-decoration: none;
+  color: var(--color)
+}
 
 
+@media (max-width:1700px) {
+  .onebook {
+    width: 75%;
+  }
+  .onebook .bookinfo {
+    float: right;
+    width: 65%
+  }
+}
+@media (max-width:1400px) {
+  .onebook {
+    width: 100%;
+  }
+}
+@media (max-width:1080px) {
+  .onebook .bookinfo {
+    width: 100%;
+    margin-top: 30px;
+  }
+  .onebook .bookinfo p {
+    width: 60%
+  }
+}
+@media (max-width:800px) {
+  nav .right, nav .addbook {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  nav h1 {
+    float: left;
+  }
+  nav .menu {
+    position: relative;
+    float: right;
+    top: -60px;
+  } 
 
-
+}
 
 
 

@@ -6,13 +6,12 @@ import Menu from './Menu'
 function Navbar() {
   return (
     <nav>
-      
-      <AddBook />
       <div className="right">
         <Link to="/"><h1><i className="fas fa-book"></i>Bookify</h1></Link>
         <div className="clear"></div>
         <Menu />
       </div>
+      <AddBook />
       <div className="clear"></div>
     </nav>
   )
