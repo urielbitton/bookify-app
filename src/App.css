@@ -192,7 +192,7 @@ nav h1 i {
 
 .onebook {
   float: right;
-  width: 60%;
+  width: 80%;
 }
 .bookcont {
   position: relative;
@@ -201,11 +201,11 @@ nav h1 i {
   background: #eee;
 }
 .bookcont  .left {
-  width: 50%;
+  width: 70%;
 }
 .bookcont .imgdiv {
   width: 20%;
-  margin-right: 120px;
+  margin-right: 70px;
 }
 .bookcont img {
   width: 300px;
